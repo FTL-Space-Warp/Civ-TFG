@@ -3,9 +3,9 @@
   "type": "tfc:disc_vein",
   "config": {
     "height": 7,
-    "size": 33,
-    "rarity": 180,
-    "density": 0.4,
+    "size": 99,
+    "rarity": 2160,
+    "density": 0.7,
     "min_y": 0,
     "max_y": 128,
     "random_name": "nether_topaz",
