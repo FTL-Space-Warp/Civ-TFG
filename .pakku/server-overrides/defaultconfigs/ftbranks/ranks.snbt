@@ -52,8 +52,8 @@
 			time_unit: "days"
 		}
 		ftbranks.name_format: "&a{name}"
-		ftbchunks.max_claimed: 50
-		ftbchunks.max_force_loaded: 6
+		ftbchunks.max_claimed: 2
+		ftbchunks.max_force_loaded: 2
 		ftbchunks.chunk_load_offline: false
         
 
@@ -62,16 +62,16 @@
 		name: "VIP"
 		power: 50
 		ftbranks.name_format: "&e{name}"
-		ftbchunks.max_claimed: 200
-		ftbchunks.max_force_loaded: 8
+		ftbchunks.max_claimed: 2
+		ftbchunks.max_force_loaded: 2
 		ftbchunks.chunk_load_offline: true
 	}
 	moderator: {
 		name: "Moderator"
 		power: 51
 		ftbranks.name_format: "&b{name}"
-		ftbchunks.max_claimed: 200
-		ftbchunks.max_force_loaded: 8
+		ftbchunks.max_claimed: 2
+		ftbchunks.max_force_loaded: 2
 
 		command.ftbchunks.admin.bypass_protection: true
 		command.ban: true
@@ -88,7 +88,7 @@
 		xaero.pac_admin_mode: true
 		xaero.pac_server_claims: true
 		ftbranks.name_format: "&c{name}&c"
-		ftbchunks.max_claimed: 10000
-		ftbchunks.max_force_loaded: 10000
+		ftbchunks.max_claimed: 2
+		ftbchunks.max_force_loaded: 2
 	}
 }

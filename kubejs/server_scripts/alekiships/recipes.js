@@ -13,8 +13,9 @@ const registerAlekishipsRecipes = (event) => {
 	event.remove("alekiships:crafting/cannonball")
 
 	//#region Oarlock
+	/* REMOVED TO PREVENT TURNING ONE KIND OF BRONZE INTO ANOTHER
 	event.recipes.gtceu.assembler('tfg:alekiships/oarlock')
-		.itemInputs('2x #forge:ingots/wrought_iron')
+		.itemInputs('2x #forge:ingots/bronze')
 		.circuit(13)
 		.itemOutputs('alekiships:oarlock')
 		.duration(75)
@@ -22,13 +23,14 @@ const registerAlekishipsRecipes = (event) => {
 		.addMaterialInfo(true)
 
 	event.recipes.tfc.heating('alekiships:oarlock', 1535)
-		.resultFluid(Fluid.of('gtceu:iron', 288))
+		.resultFluid(Fluid.of('gtceu:bronze', 288))
 		.id(`alekiships:heating/oarlock`)
 	//#endregion
+	*/
 
 	//#region Cleat
 	event.recipes.gtceu.assembler('tfg:firmaciv/cleat')
-		.itemInputs('2x #forge:ingots/steel')
+		.itemInputs('2x #forge:ingots/wrought_iron')
 		.circuit(14)
 		.itemOutputs('alekiships:cleat')
 		.duration(75)
@@ -36,13 +38,13 @@ const registerAlekishipsRecipes = (event) => {
 		.addMaterialInfo(true)
 
 	event.recipes.tfc.heating('alekiships:cleat', 1535)
-		.resultFluid(Fluid.of('gtceu:steel', 288))
+		.resultFluid(Fluid.of('gtceu:iron', 288))
 		.id(`alekiships:heating/cleat`)
 	//#endregion
 
 	//#region Anchor
 	event.recipes.gtceu.assembler('tfg:alekiships/anchor')
-		.itemInputs('2x #forge:plates/steel')
+		.itemInputs('2x #forge:plates/wrought_iron')
 		.circuit(10)
 		.itemOutputs('alekiships:anchor')
 		.duration(75)
@@ -50,7 +52,7 @@ const registerAlekishipsRecipes = (event) => {
 		.addMaterialInfo(true)
 
 	event.recipes.tfc.heating('alekiships:anchor', 1535)
-		.resultFluid(Fluid.of('gtceu:steel', 288))
+		.resultFluid(Fluid.of('gtceu:iron', 288))
 		.id(`firmaciv:heating/anchor`)
 	//#endregion
 

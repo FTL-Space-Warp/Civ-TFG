@@ -4469,6 +4469,48 @@
             ]
         },
         {
+            "pakku_id": "x91StrebY4x3shQt",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "deathban",
+                "modrinth": "deathban"
+            },
+            "name": {
+                "curseforge": "DeathBan",
+                "modrinth": "DeathBan"
+            },
+            "id": {
+                "curseforge": "631187",
+                "modrinth": "4jWhT4F7"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "deathban-3.0.0.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20",
+                        "1.20-Snapshot"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4719/938/deathban-3.0.0.jar",
+                    "id": "4719938",
+                    "parent_id": "631187",
+                    "hashes": {
+                        "sha1": "10852b5ad0b7955fc7f3ddfd568f3e57b6715b83",
+                        "md5": "0f09ccf06a0fc0e9930a22cae43f027f"
+                    },
+                    "required_dependencies": [],
+                    "size": 19510,
+                    "date_published": "2023-08-24T07:30:32.200Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "NiTBKd1VhA8XN4n6",
             "type": "MOD",
             "slug": {
@@ -5670,7 +5712,7 @@
                 "e7thBe1Z6fvyxUtU"
             ],
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "curseforge": "ftb-backups-2"
             },
@@ -5711,56 +5753,8 @@
             ]
         },
         {
-            "pakku_id": "MxMrrOyyu2PvCSN8",
-            "pakku_links": [
-                "ieNTt8vgrcfO2nk9",
-                "0eaY2qNvkpQzolFy",
-                "hcwrEZKe0UXf0qM5",
-                "x1EwQZ6H2kVKR3U3"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "ftb-chunks-forge"
-            },
-            "name": {
-                "curseforge": "FTB Chunks (Forge)"
-            },
-            "id": {
-                "curseforge": "314906"
-            },
-            "export": true,
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "ftb-chunks-forge-2001.3.6.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6431/735/ftb-chunks-forge-2001.3.6.jar",
-                    "id": "6431735",
-                    "parent_id": "314906",
-                    "hashes": {
-                        "sha1": "7fde7917655a3356cab92f17ad2bca34962c4928",
-                        "md5": "64af750c0cbcadd4b27fb58236654814"
-                    },
-                    "required_dependencies": [
-                        "404465",
-                        "419699",
-                        "404468"
-                    ],
-                    "size": 1158842,
-                    "date_published": "2025-04-17T08:07:07.033Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "WqKV4LDCkOlDGtOe",
             "pakku_links": [
-                "MxMrrOyyu2PvCSN8",
                 "tdBDW3xpPBc3E2mt"
             ],
             "type": "MOD",
@@ -9370,6 +9364,75 @@
             ]
         },
         {
+            "pakku_id": "f64KEUHlbLUV8oBd",
+            "pakku_links": [
+                "fR2my61zK1ySP67C"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "map-atlases-forge",
+                "modrinth": "map-atlases-forge"
+            },
+            "name": {
+                "curseforge": "Map Atlases [Forge]",
+                "modrinth": "Map Atlases [Forge]"
+            },
+            "id": {
+                "curseforge": "519759",
+                "modrinth": "4hwXMFif"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "map_atlases-1.20-6.0.18.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7540/403/map_atlases-1.20-6.0.18.jar",
+                    "id": "7540403",
+                    "parent_id": "519759",
+                    "hashes": {
+                        "sha1": "ea5b16fa432694e636b66786ee2224b7c718d1d2",
+                        "md5": "9000cbf5b9c5a26b2f848e72063ef80a"
+                    },
+                    "required_dependencies": [
+                        "499980"
+                    ],
+                    "size": 741035,
+                    "date_published": "2026-01-28T11:25:32.073Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "map_atlases-1.20-6.0.18.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/4hwXMFif/versions/iqp1xnrE/map_atlases-1.20-6.0.18.jar",
+                    "id": "iqp1xnrE",
+                    "parent_id": "4hwXMFif",
+                    "hashes": {
+                        "sha512": "e72a7168d718f17ee559fb936bd466682c5d3742374b81e6b8105532de45079d2b4a8ad6daccaf38210976776855e973375ec2d4fe2f77488da4634b1efe968a",
+                        "sha1": "ea5b16fa432694e636b66786ee2224b7c718d1d2"
+                    },
+                    "required_dependencies": [
+                        "twkfQtEc"
+                    ],
+                    "size": 741035,
+                    "date_published": "2026-01-28T11:25:36.817240Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "O1aAdLiNfpMEPlMt",
             "type": "MOD",
             "side": "BOTH",
@@ -10812,7 +10875,7 @@
                 "3Hn4sTVbBvKyQJJS"
             ],
             "type": "MOD",
-            "side": "BOTH",
+            "side": "CLIENT",
             "slug": {
                 "curseforge": "pick-up-notifier",
                 "modrinth": "pick-up-notifier"
@@ -11150,6 +11213,43 @@
                     ],
                     "size": 2365466,
                     "date_published": "2024-04-01T14:08:56.003Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "NhCJvjvIwPZuDLDU",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "proximity-chat"
+            },
+            "name": {
+                "curseforge": "Proximity Chat"
+            },
+            "id": {
+                "curseforge": "1166530"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "proximitychat-1.20.1-Forge-1.2.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6034/920/proximitychat-1.20.1-Forge-1.2.0.jar",
+                    "id": "6034920",
+                    "parent_id": "1166530",
+                    "hashes": {
+                        "sha1": "91464eabf5ee7e45e7b1dcd51b420f66e302da09",
+                        "md5": "728827445a9a25d01553e07d6e65003d"
+                    },
+                    "required_dependencies": [],
+                    "size": 43279,
+                    "date_published": "2024-12-29T23:20:44.313Z"
                 }
             ]
         },
@@ -11887,6 +11987,107 @@
             ]
         },
         {
+            "pakku_id": "S5BRdAkLgTOqOxyM",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "simple-login",
+                "modrinth": "simple-login"
+            },
+            "name": {
+                "curseforge": "Simple Login",
+                "modrinth": "Simple Login"
+            },
+            "id": {
+                "curseforge": "312664",
+                "modrinth": "Gh3tnMca"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "SimpleLogin-1.20.1-1.0.2-all.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4745/380/SimpleLogin-1.20.1-1.0.2-all.jar",
+                    "id": "4745380",
+                    "parent_id": "312664",
+                    "hashes": {
+                        "sha1": "2fcdb0d2221b32fc4f64dea2957ec0dd7ace3174",
+                        "md5": "e48ba16ac4f6eb6d215d9277110d9df0"
+                    },
+                    "required_dependencies": [],
+                    "size": 99700,
+                    "date_published": "2023-09-09T16:09:31.390Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "QvtXcdPEmgvKJgv7",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "simple-voice-chat",
+                "modrinth": "simple-voice-chat"
+            },
+            "name": {
+                "curseforge": "Simple Voice Chat",
+                "modrinth": "Simple Voice Chat"
+            },
+            "id": {
+                "curseforge": "416089",
+                "modrinth": "9eGKb6K1"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "voicechat-forge-1.20.1-2.6.11.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7416/882/voicechat-forge-1.20.1-2.6.11.jar",
+                    "id": "7416882",
+                    "parent_id": "416089",
+                    "hashes": {
+                        "sha1": "672aeb74607003370f5724bd2048e4d9d585c799",
+                        "md5": "b3192730c7e28ceeeafc0521c79e7eca"
+                    },
+                    "required_dependencies": [],
+                    "size": 4892131,
+                    "date_published": "2026-01-04T15:11:03.403Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "voicechat-forge-1.20.1-2.6.11.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/eeY1kjuJ/voicechat-forge-1.20.1-2.6.11.jar",
+                    "id": "eeY1kjuJ",
+                    "parent_id": "9eGKb6K1",
+                    "hashes": {
+                        "sha512": "6ee536822403b249d1b10f1c6b21fbaac8c4238e994b9817f0bb08a21418e401f673a65e3f87683f8168ecafca2c93fd39fb842cf9b1cf0a4ffbc5ae001b35bb",
+                        "sha1": "b21ce1450c67b84937216771a6655f6a2cd66839"
+                    },
+                    "required_dependencies": [],
+                    "size": 4892131,
+                    "date_published": "2026-01-04T15:11:26.901501Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "S6lFre0k0NDMOA8K",
             "type": "MOD",
             "slug": {
@@ -11956,6 +12157,70 @@
                     "required_dependencies": [],
                     "size": 20450,
                     "date_published": "2024-07-24T23:23:54.183Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "FF5bVYvtariLcX1R",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "skinrestorer",
+                "modrinth": "skinrestorer"
+            },
+            "name": {
+                "curseforge": "Skin Restorer",
+                "modrinth": "Skin Restorer"
+            },
+            "id": {
+                "curseforge": "443823",
+                "modrinth": "ghrZDhGW"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "skinrestorer-2.5.0+1.20-forge.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7460/585/skinrestorer-2.5.0+1.20-forge.jar",
+                    "id": "7460585",
+                    "parent_id": "443823",
+                    "hashes": {
+                        "sha1": "527147cb9f5b840dc897e026478b038a167ad978",
+                        "md5": "425756c7e40c08ec7a58c8b39e513d70"
+                    },
+                    "required_dependencies": [],
+                    "size": 213585,
+                    "date_published": "2026-01-14T21:11:45.137Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "skinrestorer-2.5.0+1.20-forge.jar",
+                    "mc_versions": [
+                        "1.20",
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/ghrZDhGW/versions/qnvH83GJ/skinrestorer-2.5.0+1.20-forge.jar",
+                    "id": "qnvH83GJ",
+                    "parent_id": "ghrZDhGW",
+                    "hashes": {
+                        "sha512": "5330e59aeb8203713b7c26bf1b2dd1bfaf9434767ed8754c460d57eebc216cb6537aa661fc4930d5453b3159604f511594a91a369aa863ad36eed18cd5fce8f1",
+                        "sha1": "527147cb9f5b840dc897e026478b038a167ad978"
+                    },
+                    "required_dependencies": [],
+                    "size": 213585,
+                    "date_published": "2026-01-14T21:11:45.898844Z"
                 }
             ]
         },

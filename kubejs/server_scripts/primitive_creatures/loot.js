@@ -6,7 +6,7 @@ function registerPrimitiveCreaturesLoots(event) {
 	// kaolin klayze
 	event.addEntityLootModifier('primitive_creatures:tfc')
 		.removeLoot(ItemFilter.ALWAYS_TRUE)
-		.addWeightedLoot([12, 16], ['tfc:kaolin_clay', 'minecraft:clay_ball'])
+		.addLoot('minecraft:clay_ball')
 		.addLoot('tfc:plant/blood_lily')
 
 	// graphite glayze

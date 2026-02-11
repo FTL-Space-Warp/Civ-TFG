@@ -282,9 +282,6 @@
             "side": "BOTH",
             "export": true
         },
-        "ftb-chunks-forge": {
-            "export": true
-        },
         "ftb-essentials": {
             "export": true
         },
