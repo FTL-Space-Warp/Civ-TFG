@@ -11989,7 +11989,7 @@
         {
             "pakku_id": "S5BRdAkLgTOqOxyM",
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "curseforge": "simple-login",
                 "modrinth": "simple-login"
