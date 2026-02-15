@@ -73,7 +73,7 @@
 	#Show hidden effects
 	showHiddenEffects = true
 	#Disable icons for effects in this list
-	effectsBlackList = []
+	effectsBlackList = ["xaeroworldmap:no_world_map", "xaerominimap:no_minimap"]
 	#Show Potion HUD when debug menu is open
 	potWithDebug = true
 	#Show all levels of effects

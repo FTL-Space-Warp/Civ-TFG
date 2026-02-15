@@ -137,7 +137,7 @@
             "side": "CLIENT"
         },
         "simple-login": {
-            "side": "CLIENT"
+            "side": "BOTH"
         },
         "cherished-worlds": {
             "side": "CLIENT"

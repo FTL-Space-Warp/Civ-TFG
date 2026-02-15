@@ -133,13 +133,13 @@ familiarityDecayLimit = 0.3
 		#
 		# Number of ticks required for a torch to burn out (1000 = 1 in game hour = 50 seconds), default is 72 hours. Set to -1 to disable torch burnout.
 		#Range: > -1
-		torchTicks = 72000
+		torchTicks = 1584000
 
 	[blocks.candle]
 		#
 		# Number of ticks required for a candle to burn out (1000 = 1 in game hour = 50 seconds), default is 264 hours. Set to -1 to disable candle burnout.
 		#Range: > -1
-		candleTicks = 264000
+		candleTicks = 5808000
 
 	[blocks.dryingBricks]
 		#
@@ -254,7 +254,7 @@ familiarityDecayLimit = 0.3
 		#
 		# Number of ticks required for a jack 'o lantern to burn out (1000 = 1 in game hour = 50 seconds), default is 108 hours. Set to -1 to disable burnout.
 		#Range: > -1
-		jackOLanternTicks = 108000
+		jackOLanternTicks = 2376000
 
 	[blocks.bloomery]
 		#
@@ -369,11 +369,11 @@ familiarityDecayLimit = 0.3
 		#
 		# Modifier applied to the growth time of every (non-fruit) sapling. The modifier multiplies the ticks it takes to grow, so larger values cause longer growth times. For example, a value of 2 doubles the growth time.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		globalSaplingGrowthModifier = 1.0
+		globalSaplingGrowthModifier = 22.5
 		#
 		# Modifier applied to the growth time of every fruit tree sapling. The modifier multiplies the ticks it takes to grow, so larger values cause longer growth times. For example, a value of 2 doubles the growth time.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		globalFruitSaplingGrowthModifier = 1.0
+		globalFruitSaplingGrowthModifier = 10
 		#
 		# Days for a acacia tree sapling to be ready to grow into a full tree.
 		#Range: > 0
@@ -495,11 +495,11 @@ familiarityDecayLimit = 0.3
 		#
 		# Modifier applied to the growth time of every crop. The modifier multiplies the ticks it takes to grow, so larger values cause longer growth times. For example, a value of 2 doubles the growth time.
 		#Range: 0.001 ~ 1000.0
-		cropGrowthModifier = 1.0
+		cropGrowthModifier = 2
 		#
 		# Modifier applied to the expiry time of every crop. The modifier multiplies the ticks it takes to grow, so larger values cause longer expiry times. For example, a value of 2 doubles the expiry time.
 		#Range: 0.001 ~ 1000.0
-		cropExpiryModifier = 1.0
+		cropExpiryModifier = 1
 
 	[blocks.dispenser]
 		#
@@ -750,7 +750,7 @@ familiarityDecayLimit = 0.3
 		# Setting this to zero will cause decay not to apply.
 		# Note that if you set this to zero **food items will lose their creation dates!!**. This is not reversible!
 		#Range: 0.0 ~ 1000.0
-		foodDecayModifier = 1.0
+		foodDecayModifier = 0.05
 		#
 		# Enables negative effects from carrying too many very heavy items, including potion effects.
 		enableOverburdening = true
@@ -857,7 +857,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			pigAdulthoodDays = 80
+			pigAdulthoodDays = 120
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -882,7 +882,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			donkeyAdulthoodDays = 80
+			donkeyAdulthoodDays = 120
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -907,7 +907,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			muleAdulthoodDays = 80
+			muleAdulthoodDays = 120
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -932,7 +932,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			horseAdulthoodDays = 80
+			horseAdulthoodDays = 120
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -957,7 +957,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			catAdulthoodDays = 50
+			catAdulthoodDays = 75
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -982,7 +982,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			dogAdulthoodDays = 50
+			dogAdulthoodDays = 75
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1007,7 +1007,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			cowAdulthoodDays = 192
+			cowAdulthoodDays = 288
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1040,7 +1040,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			goatAdulthoodDays = 96
+			goatAdulthoodDays = 144
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1073,7 +1073,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			yakAdulthoodDays = 180
+			yakAdulthoodDays = 270
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1106,7 +1106,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			alpacaAdulthoodDays = 98
+			alpacaAdulthoodDays = 147
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1139,7 +1139,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			sheepAdulthoodDays = 56
+			sheepAdulthoodDays = 84
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1172,7 +1172,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			muskOxAdulthoodDays = 168
+			muskOxAdulthoodDays = 252
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1205,7 +1205,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			chickenAdulthoodDays = 24
+			chickenAdulthoodDays = 36
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1234,7 +1234,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			duckAdulthoodDays = 32
+			duckAdulthoodDays = 48
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1263,7 +1263,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			quailAdulthoodDays = 22
+			quailAdulthoodDays = 33
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0
@@ -1292,7 +1292,7 @@ familiarityDecayLimit = 0.3
 			#
 			# Days until animal reaches adulthood
 			#Range: > 0
-			rabbitAdulthoodDays = 80
+			rabbitAdulthoodDays = 120
 			#
 			# Uses before animal becomes old and can no longer be used
 			#Range: > 0

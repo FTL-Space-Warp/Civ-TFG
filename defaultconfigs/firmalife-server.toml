@@ -4,10 +4,10 @@
 	usePipesForSprinklers = false
 	#Days in a cellar to make cheese Aged.
 	#Range: > 1
-	cheeseAgedDays = 28
+	cheeseAgedDays = 56
 	#Days in a cellar to make cheese Vintage.
 	#Range: > 1
-	cheeseVintageDays = 112
+	cheeseVintageDays = 224
 	#Ticks to dry something on a drying mat (24000 ticks = 1 day)
 	#Range: > 1
 	dryingTicks = 12000
@@ -89,22 +89,22 @@
 	traitRancid_smokedModifier = 2.0
 	#The modifier for the 'Shelved' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitShelvedModifier = 0.4000000059604645
+	traitShelvedModifier = 0.222222226
 	#The modifier for the 'Shelved_2' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitShelved_2Modifier = 0.3499999940395355
+	traitShelved_2Modifier = 0.194444441
 	#The modifier for the 'Shelved_3' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitShelved_3Modifier = 0.25
+	traitShelved_3Modifier = 0.138888889
 	#The modifier for the 'Hung' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitHungModifier = 0.3499999940395355
+	traitHungModifier = 0.194444441
 	#The modifier for the 'Hung_2' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitHung_2Modifier = 0.30000001192092896
+	traitHung_2Modifier = 0.166666673
 	#The modifier for the 'Hung_3' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
-	traitHung_3Modifier = 0.25
+	traitHung_3Modifier = 0.138888889
 	#The modifier for the 'Fermented' food trait. Values less than 1 extend food lifetime, values greater than one decrease it. A value of zero stops decay.
 	#Range: 0.0 ~ 1.7976931348623157E308
 	traitFermentedModifier = 0.25
