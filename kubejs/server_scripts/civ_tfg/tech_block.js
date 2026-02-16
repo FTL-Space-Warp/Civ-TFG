@@ -37,7 +37,7 @@ const tier_costs = [
     {"tfg:uhv_universal_circuit": 128}, // UHV
 ]
 
-
+/*
 const progression_tiers = {
     copper: 0,
     bronze: 1,
@@ -56,18 +56,36 @@ const progression_tiers = {
     UHV: 14,
     none: 15
 }
+*/
+
+const progression_tiers = [
+    "copper",
+    "bronze",
+    "iron",
+    "steel",
+    "black_steel",
+    "red_steel",
+    "LV",
+    "MV",
+    "HV",
+    "EV",
+    "IV",
+    "LuV",
+    "ZPM",
+    "UV",
+    "UHV",
+    "none"
+]
 
 // Variable for the current tech tier
-const current_tier = progression_tiers.none
+const current_tier = "LV"
 
 
 // Delete recipes up to the desired tier
 ServerEvents.recipes(event => {
-    console.log(current_tier)
+    if(current_tier == "none") return 1
 
-    if(current_tier == 15) return 1
-
-    tier_items.slice(current_tier).forEach((tier) => {
+    tier_items.slice(progression_tiers.indexOf(current_tier)).forEach((tier) => {
         tier.forEach(item => {
             event.remove({ output: item });
         })
@@ -83,13 +101,13 @@ ServerEvents.commandRegistry(event => {
     event.register(
         Commands.literal('tier')
 
-        // Runs with no arguments, query current tier and progress
+        // Query current tier and progress, serverwide if run with no arguments
         .executes(ctx => {
             const sender = ctx.source.entity
             const server = ctx.source.server
                     
             if (sender) {
-                if (current_tier != 15) {
+                if (current_tier != "none") {
                     let tier_msg = getProgress(server)
                     if (tier_msg) {
                         tier_msg.forEach(line => {
@@ -99,8 +117,9 @@ ServerEvents.commandRegistry(event => {
                         sender.tell("null")
                     }
                 } else sender.tell("No tier enabled!")
+
             } else {
-                if (current_tier != 15) {
+                if (current_tier != "none") {
                     let tier_msg = getProgress(server)
                     if (tier_msg) {
                         tier_msg.forEach(line => {
@@ -129,35 +148,89 @@ ServerEvents.commandRegistry(event => {
                     const sender = ctx.source.entity
                     const server = ctx.source.server
 
-                    if (current_tier != 15) {
+                    if (current_tier != "none") {
                         if (sender) {
                             let msg = addProgress(server, sender)
                             if (msg) {
-                                msg.forEach(line => {
-                                    sender.tell(line)
-                                })
+                                msg.forEach(line => sender.tell(line))
                             }
                         }
+                    } else sender.tell("No tier enabled!")
+                    return 1
+                })
+            )
+        )
+        .then(Commands.literal("stats")
+            .then(Commands.argument('tier', Arguments.STRING.create(event))
+                .suggests((ctx, builder) => {
+                    progression_tiers.forEach(validToken => builder.suggest(validToken))
+                    return builder.buildFuture()
+                })
+                .executes(ctx => {
+                    const sender = ctx.source.entity
+                    const server = ctx.source.server
+                    const tier = Arguments.STRING.getResult(ctx, 'tier')
+
+                    if (!progression_tiers.includes(tier)) {
+                        ctx.source.sendFailure(Component.red(`Invalid tier: '${tier}'`))
+                        return 0
+                    }
+                    if (sender) {
+                        let msg = getStats(server, sender.name.string, tier)
+                        msg.forEach(line => sender.tell(line))
                     }
                     return 1
                 })
+                .then(Commands.argument('target', Arguments.PLAYER.create(event))
+                    .executes(ctx => {
+                        const sender = ctx.source.entity
+                        const server = ctx.source.server
+                        const tier = Arguments.STRING.getResult(ctx, 'tier')
+                        const player_name = Arguments.PLAYER.getResult(ctx, 'target').name.string
+
+                        if (!progression_tiers.includes(tier)) {
+                            ctx.source.sendFailure(Component.red(`Invalid tier: '${tier}'`))
+                            return 0
+                        }
+                        if (sender) {
+                            sender.tell(sender.name.string)
+                            sender.tell(player_name)
+                            sender.tell(player_name == sender.name.string)
+                            let msg = getStats(server, player_name, tier)
+                            msg.forEach(line => sender.tell(line))
+                        }
+                        return 1
+                    })
+                )
             )
         )
     )
 })
 
+
 // Return a message containing the progress towards the next tier 
 function getProgress(server) {
-    // Initialize persistentData if it's null or if 
-    if (server.persistentData.tierProgress?.tier !== current_tier) server.persistentData.tierProgress = { tier: current_tier }
-    const spent_items = server.persistentData.tierProgress
+    // Initialize persistentData if it's null
+    if (!server.persistentData.tierProgress) server.persistentData.tierProgress = {}
+    if (!Object.keys(server.persistentData.tierProgress).includes(current_tier)) server.persistentData.tierProgress[current_tier] = {}
 
-    const requirements = tier_costs[current_tier]
+    const spent_items = {}
+    Object.values(server.persistentData.tierProgress[current_tier]).forEach(player => {
+        Object.keys(player).forEach(item => {
+            if (!spent_items[item]) {
+                spent_items[item] = player[item]
+            } else {
+                spent_items[item] += player[item]
+            }
+        })
+    })
+
+    const requirements = tier_costs[progression_tiers.indexOf(current_tier)]
     const keys = Object.keys(requirements)
 
     const outputLines = [
         "-".repeat(25),
-        "Current tier is: §e" + Object.keys(progression_tiers)[parseInt(current_tier)],
+        "Current tier is: §e" + current_tier,
         "Required for next tier:"
     ]
 
@@ -185,10 +258,22 @@ function getProgress(server) {
 // Remove required items in a player's inventory and add them to the server's progress
 function addProgress(server, player) {    
     // Initialize persistentData if it's null
-    if (server.persistentData.tierProgress?.tier !== current_tier) server.persistentData.tierProgress = { tier: current_tier }
-    const spent_items = server.persistentData.tierProgress
+    if (!server.persistentData.tierProgress) server.persistentData.tierProgress = {}
+    if (!Object.keys(server.persistentData.tierProgress).includes(current_tier)) server.persistentData.tierProgress[current_tier] = {}
 
-    const requirements = tier_costs[current_tier]
+    const spent_items = {}
+    Object.values(server.persistentData.tierProgress[current_tier]).forEach(player => {
+        Object.keys(player).forEach(item => {
+            if (!spent_items[item]) {
+                spent_items[item] = player[item]
+            } else {
+                spent_items[item] += player[item]
+            }
+        })
+    })
+
+
+    const requirements = tier_costs[progression_tiers.indexOf(current_tier)]
     const keys = Object.keys(requirements)
     const outputLines = []
 
@@ -208,8 +293,14 @@ function addProgress(server, player) {
             if (consumed_items) {
                 server.runCommandSilent(`clear ${player.name.string} ${item} ${consumed_items}`)
                 outputLines.push(`- §e${Item.of(item).displayName.string.slice(4, -1)}: §f${consumed_items}`)
-                server.persistentData.tierProgress[item] = spent + consumed_items
-                console.log(server.persistentData.tierProgress)
+                if (!server.persistentData.tierProgress[current_tier][player.name.string]) {
+                    server.persistentData.tierProgress[current_tier][player.name.string] = {}
+                }
+                if (!server.persistentData.tierProgress[current_tier][player.name.string][item]) {
+                    server.persistentData.tierProgress[current_tier][player.name.string][item] = consumed_items
+                } else {
+                    server.persistentData.tierProgress[current_tier][player.name.string][item] += consumed_items
+                }
             }
         })
         if (outputLines.length) {
@@ -220,4 +311,31 @@ function addProgress(server, player) {
         }
     }
     return outputLines
+}
+
+
+// Return a message displaying the items submitted by a single player
+function getStats(server, player_name, tier) {
+
+    // Return no items if the current tier has not been initialized
+    if (!server.persistentData.tierProgress || !Object.keys(server.persistentData.tierProgress).includes(tier) || !server.persistentData.tierProgress[tier][player_name]) {
+        return [`No stats for ${player_name} for tier: §e${tier}`]
+    } else {
+        let player_stats = server.persistentData.tierProgress[tier][player_name]
+        let keys = Object.keys(player_stats)
+        let outputLines = [
+            "-".repeat(25),
+            `Items submitted by ${player_name} for tier: §e${tier}§f:`
+        ]
+
+        if (!keys.length) {
+            return [`No stats for ${player_name} for tier: §e${tier}`]
+        } else {
+            keys.forEach(item => {
+                outputLines.push(`- §e${Item.of(item).displayName.string.slice(4, -1)}: §f${player_stats[item]}`)
+            })
+        }
+
+        return outputLines
+    }
 }
