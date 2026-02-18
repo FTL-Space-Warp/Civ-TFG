@@ -7,7 +7,7 @@
 		"ground_state": {
 			"type": "minecraft:simple_state_provider",
 			"state": {
-				"Name": "tfc:kaolin_clay_grass"
+				"Name": "tfc:clay_grass/silt"
 			}
 		},
 		"replaceable": "#tfg:lush_ground_replaceable",

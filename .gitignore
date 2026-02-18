@@ -18,6 +18,7 @@ node_modules/
 Modpack-Modern.sln
 Modpack-Modern.esproj
 crowdin.yml
+edit.py
 
 # Pakku
 build/
