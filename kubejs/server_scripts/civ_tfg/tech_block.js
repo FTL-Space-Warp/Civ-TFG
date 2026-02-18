@@ -2,8 +2,8 @@
 
 
 const tier_items = [
-    ['tfc:metal/anvil/copper'],
-    ['tfc:metal/anvil/bronze', 'tfc:metal/anvil/bismuth_bronze', 'tfc:metal/anvil/black_bronze'],
+    //['tfc:metal/anvil/copper'],
+    //['tfc:metal/anvil/bronze', 'tfc:metal/anvil/bismuth_bronze', 'tfc:metal/anvil/black_bronze'],
     ['tfc:metal/anvil/wrought_iron'],
     ['tfc:metal/anvil/steel'],
     ['tfc:metal/anvil/black_steel'],
@@ -20,47 +20,29 @@ const tier_items = [
 ]
 
 const tier_costs = [
-    {"minecraft:copper_ingot": 64}, // copper
-    {"gtceu:bronze_ingot": 64}, // bronze
-    {"gtceu:wrought_iron_ingot": 64}, // iron
-    {"gtceu:steel_ingot": 64}, // steel
-    {"tfc:metal/ingot/black_steel": 64}, // black_steel
-    {"tfc:metal/ingot/red_steel": 32, "tfc:metal/ingot/blue_steel": 32}, // red_steel
-    {"tfg:lv_universal_circuit": 128}, // LV
-    {"tfg:mv_universal_circuit": 128}, // MV
-    {"tfg:hv_universal_circuit": 128}, // HV
-    {"tfg:ev_universal_circuit": 128}, // EV
-    {"tfg:iv_universal_circuit": 128}, // IV
-    {"tfg:luv_universal_circuit": 128}, // LuV
-    {"tfg:zpm_universal_circuit": 128}, // ZPM
-    {"tfg:uv_universal_circuit": 128}, // UV
-    {"tfg:uhv_universal_circuit": 128}, // UHV
+    //{"minecraft:copper_ingot": 64}, // copper
+    //{"gtceu:bronze_ingot": 64}, // bronze
+    {"gtceu:wrought_iron_ingot": 200, 
+        "gtceu:bismuth_bronze_ingot": 64, "gtceu:black_bronze_ingot": 64, "gtceu:bronze_ingot": 64,
+        "tfc:burlap_cloth": 150, "tfc:linen_cloth": 150}, // iron
+    {"gtceu:steel_ingot": 200, "create:brass_ingot": 200, "firmalife:beeswax": 150, "tfc:wool_cloth": 150}, // steel
+    {"tfc:metal/ingot/black_steel": 400, "minecraft:leather": 150, "tfc:silk_cloth": 150}, // black_steel
+    {"tfc:metal/ingot/red_steel": 200, "tfc:metal/ingot/blue_steel": 200, "create:electron_tube": 500}, // red_steel
+    {"tfg:lv_universal_circuit": 2000, "gtceu:steel_ingot": 500}, // LV
+    {"tfg:mv_universal_circuit": 2000, "gtceu:steel_ingot": 500, "gtceu:aluminium_ingot": 500}, // MV
+    {"tfg:hv_universal_circuit": 2000, "gtceu:aluminium_ingot": 500, "gtceu:stainless_steel_ingot": 500}, // HV
+    {"tfg:ev_universal_circuit": 2000, "gtceu:stainless_steel_ingot": 500, "gtceu:titanium_ingot": 500}, // EV
+    {"tfg:iv_universal_circuit": 2000, "gtceu:titanium_ingot": 500, "gtceu:tungsten_steel_ingot": 500}, // IV
+    {"tfg:luv_universal_circuit": 2000}, // LuV
+    {"tfg:zpm_universal_circuit": 2000}, // ZPM
+    {"tfg:uv_universal_circuit": 2000}, // UV
+    {"tfg:uhv_universal_circuit": 2000}, // UHV
 ]
 
-/*
-const progression_tiers = {
-    copper: 0,
-    bronze: 1,
-    iron: 2,
-    steel: 3,
-    black_steel: 4,
-    red_steel: 5,
-    LV: 6,
-    MV: 7,
-    HV: 8,
-    EV: 9,
-    IV: 10,
-    LuV: 11,
-    ZPM: 12,
-    UV: 13,
-    UHV: 14,
-    none: 15
-}
-*/
 
 const progression_tiers = [
-    "copper",
-    "bronze",
+    //"copper",
+    //"bronze",
     "iron",
     "steel",
     "black_steel",
@@ -102,39 +84,24 @@ ServerEvents.commandRegistry(event => {
         Commands.literal('tier')
 
         // Query current tier and progress, serverwide if run with no arguments
-        .executes(ctx => {
+        .then(Commands.literal("status")
+            .executes(ctx => {
             const sender = ctx.source.entity
             const server = ctx.source.server
-                    
-            if (sender) {
-                if (current_tier != "none") {
-                    let tier_msg = getProgress(server)
-                    if (tier_msg) {
-                        tier_msg.forEach(line => {
-                            sender.tell(line)
-                        })
-                    } else {
-                        sender.tell("null")
-                    }
-                } else sender.tell("No tier enabled!")
 
+            let msg = getProgress(server)
+
+            if (sender) {
+                msg.forEach(line => sender.tell(line))
             } else {
-                if (current_tier != "none") {
-                    let tier_msg = getProgress(server)
-                    if (tier_msg) {
-                        tier_msg.forEach(line => {
-                            server.tell(line)
-                        })
-                    } else {
-                        server.tell("null")
-                    }
-                } else sender.tell("No tier enabled!")
+                msg.forEach(line => server.tell(line))
             }
             return 1
-        })
+            })
+        )
 
         // Submit currently held items and add them to the progress
-        .then(Commands.literal("submit")
+        .then(Commands.literal("submit") // Contribute items to the tier progress
             .executes(ctx => {
                 const sender = ctx.source.entity
                 if (sender) {
@@ -148,22 +115,18 @@ ServerEvents.commandRegistry(event => {
                     const sender = ctx.source.entity
                     const server = ctx.source.server
 
-                    if (current_tier != "none") {
-                        if (sender) {
-                            let msg = addProgress(server, sender)
-                            if (msg) {
-                                msg.forEach(line => sender.tell(line))
-                            }
-                        }
-                    } else sender.tell("No tier enabled!")
+                    let msg = addProgress(server, sender)
+
+                    if (sender) msg.forEach(line => sender.tell(line))
                     return 1
                 })
             )
         )
-        .then(Commands.literal("stats")
+        .then(Commands.literal("stats") // Read how many items a player has contributed
             .then(Commands.argument('tier', Arguments.STRING.create(event))
+                // command autocomplete
                 .suggests((ctx, builder) => {
-                    progression_tiers.forEach(validToken => builder.suggest(validToken))
+                    progression_tiers.slice(0, -1).forEach(validToken => builder.suggest(validToken))
                     return builder.buildFuture()
                 })
                 .executes(ctx => {
@@ -187,17 +150,16 @@ ServerEvents.commandRegistry(event => {
                         const server = ctx.source.server
                         const tier = Arguments.STRING.getResult(ctx, 'tier')
                         const player_name = Arguments.PLAYER.getResult(ctx, 'target').name.string
+                        let msg = getStats(server, player_name, tier)
 
                         if (!progression_tiers.includes(tier)) {
                             ctx.source.sendFailure(Component.red(`Invalid tier: '${tier}'`))
                             return 0
                         }
                         if (sender) {
-                            sender.tell(sender.name.string)
-                            sender.tell(player_name)
-                            sender.tell(player_name == sender.name.string)
-                            let msg = getStats(server, player_name, tier)
                             msg.forEach(line => sender.tell(line))
+                        } else {
+                            msg.forEach(line => server.tell(line))
                         }
                         return 1
                     })
@@ -235,8 +197,10 @@ function getProgress(server) {
     ]
 
     // Handle missing costs gracefully
-    if (keys.length === 0) {
-        return null
+    if (current_tier == "none") {
+        return ["No tier lock enabled!"]
+    } else if (keys.length == 0) {
+        return ["The current tier has no item requirements!"]
     } else {
         let total_spent = 0
         let total_required = 0
@@ -278,9 +242,11 @@ function addProgress(server, player) {
     const outputLines = []
 
 
-    // Handle missing costs gracefully
-    if (keys.length === 0) {
-        return null
+    // Handle missing costs or tier gracefully
+    if (current_tier == "none") {
+        return ["No tier lock enabled!"]
+    } else if (keys.length == 0) {
+        return ["The current tier has no item requirements!"]
     } else {
         keys.forEach(item => {
             const required = requirements[item] ?? 0
