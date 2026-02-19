@@ -60,7 +60,7 @@ const progression_tiers = [
 ]
 
 // Variable for the current tech tier
-const current_tier = "LV"
+const current_tier = "iron"
 
 
 // Delete recipes up to the desired tier
