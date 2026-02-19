@@ -3306,6 +3306,53 @@
             ]
         },
         {
+            "pakku_id": "Z5wWkmohh4qqw6YI",
+            "pakku_links": [
+                "qpOpdGmVXMMLI3pY",
+                "MSgrz6QXbB7uutbR"
+            ],
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "craftaudit"
+            },
+            "name": {
+                "modrinth": "CraftAudit"
+            },
+            "id": {
+                "modrinth": "XURvx0KZ"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "CraftAudit-1.0.8.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20.2",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/XURvx0KZ/versions/MCrdkLJq/CraftAudit-1.0.8.jar",
+                    "id": "MCrdkLJq",
+                    "parent_id": "XURvx0KZ",
+                    "hashes": {
+                        "sha512": "940f5bed5bee5711d4389c8e2f58664e7b9a877522d7904a4c3fd4c89b9892182c7b27fe4ea5d3cf75a440a212c5678fb0c96bf255971ec275260fab379192c9",
+                        "sha1": "039540a55c7397861ce538ce22eef9ee7e69f471"
+                    },
+                    "required_dependencies": [
+                        "yvtIuyXT",
+                        "GAUIVqEJ"
+                    ],
+                    "size": 86527,
+                    "date_published": "2025-10-06T08:25:22.650440Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "FWUslNlfrCLR1dXa",
             "pakku_links": [
                 "Osj3mktzthdVRa2j"
@@ -10019,6 +10066,111 @@
             ]
         },
         {
+            "pakku_id": "qpOpdGmVXMMLI3pY",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "mysql-jdbc",
+                "modrinth": "mysql-jdbc"
+            },
+            "name": {
+                "curseforge": "MySQL JDBC (Fabric/Forge)",
+                "modrinth": "MySQL JDBC"
+            },
+            "id": {
+                "curseforge": "561280",
+                "modrinth": "yvtIuyXT"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "mysql-jdbc-8.0.33+20230506-all.jar",
+                    "mc_versions": [
+                        "1.20.2-Snapshot",
+                        "1.20.1",
+                        "1.20",
+                        "1.20-Snapshot"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge",
+                        "forge",
+                        "quilt"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4684/944/mysql-jdbc-8.0.33+20230506-all.jar",
+                    "id": "4684944",
+                    "parent_id": "561280",
+                    "hashes": {
+                        "sha1": "0a3b812045ffadc7fc8f4d064fb8bb16cf830e9b",
+                        "md5": "ed9b489a2ed6dce80c6b2dc4e4fe4443"
+                    },
+                    "required_dependencies": [],
+                    "size": 2496667,
+                    "date_published": "2023-08-06T10:35:38.717Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "mysql-jdbc-8.0.33+20230506-all.jar",
+                    "mc_versions": [
+                        "1.12",
+                        "1.12.1",
+                        "1.12.2",
+                        "1.13",
+                        "1.13.1",
+                        "1.13.2",
+                        "1.14",
+                        "1.14.1",
+                        "1.14.2",
+                        "1.14.3",
+                        "1.14.4",
+                        "1.15",
+                        "1.15.1",
+                        "1.15.2",
+                        "1.16",
+                        "1.16.1",
+                        "1.16.2",
+                        "1.16.3",
+                        "1.16.4",
+                        "1.16.5",
+                        "1.17",
+                        "1.17.1",
+                        "1.18",
+                        "1.18.1",
+                        "1.18.2",
+                        "1.19",
+                        "1.19.1",
+                        "1.19.2",
+                        "1.19.3",
+                        "1.19.4",
+                        "1.20",
+                        "1.20.1",
+                        "1.20.2",
+                        "1.20.3",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "paper",
+                        "quilt",
+                        "spigot"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/yvtIuyXT/versions/94JxXm7O/mysql-jdbc-8.0.33+20230506-all.jar",
+                    "id": "94JxXm7O",
+                    "parent_id": "yvtIuyXT",
+                    "hashes": {
+                        "sha512": "bcbaf82b77c15b04838a6652ec475befb48f04114d166f12e8f7d15aaf7a15e9167bf6a20b3b74458bcc8cd00e9d9d4d287c90804e94685cf6384b8a7fe5da72",
+                        "sha1": "0a3b812045ffadc7fc8f4d064fb8bb16cf830e9b"
+                    },
+                    "required_dependencies": [],
+                    "size": 2496667,
+                    "date_published": "2023-05-06T22:32:54.814100Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "mJc6wpWhhBYx4djb",
             "type": "MOD",
             "side": "SERVER",
@@ -11666,6 +11818,107 @@
                     ],
                     "size": 3568839,
                     "date_published": "2025-12-16T05:14:29.893Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "MSgrz6QXbB7uutbR",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "sqlite-jdbc",
+                "modrinth": "sqlite-jdbc"
+            },
+            "name": {
+                "curseforge": "SQLite JDBC (Fabric/Forge)",
+                "modrinth": "SQLite JDBC"
+            },
+            "id": {
+                "curseforge": "560832",
+                "modrinth": "GAUIVqEJ"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "sqlite-jdbc-3.36.0.3+20211227-all.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/3582/173/sqlite-jdbc-3.36.0.3+20211227-all.jar",
+                    "id": "3582173",
+                    "parent_id": "560832",
+                    "hashes": {
+                        "sha1": "5be2c4338202b73722a4bc5bc96a22c6d35c4b57",
+                        "md5": "2ce9e93c19fbbec19dd32c14377f49e4"
+                    },
+                    "required_dependencies": [],
+                    "size": 9742042,
+                    "date_published": "2021-12-27T19:38:19.130Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "sqlite-jdbc-3.41.2.1+20230506-all.jar",
+                    "mc_versions": [
+                        "1.12",
+                        "1.12.1",
+                        "1.12.2",
+                        "1.13",
+                        "1.13.1",
+                        "1.13.2",
+                        "1.14",
+                        "1.14.1",
+                        "1.14.2",
+                        "1.14.3",
+                        "1.14.4",
+                        "1.15",
+                        "1.15.1",
+                        "1.15.2",
+                        "1.16",
+                        "1.16.1",
+                        "1.16.2",
+                        "1.16.3",
+                        "1.16.4",
+                        "1.16.5",
+                        "1.17",
+                        "1.17.1",
+                        "1.18",
+                        "1.18.1",
+                        "1.18.2",
+                        "1.19",
+                        "1.19.1",
+                        "1.19.2",
+                        "1.19.3",
+                        "1.19.4",
+                        "1.20",
+                        "1.20.1",
+                        "1.20.2",
+                        "1.20.3",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "paper",
+                        "quilt",
+                        "spigot"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/GAUIVqEJ/versions/7foxfVOx/sqlite-jdbc-3.41.2.1+20230506-all.jar",
+                    "id": "7foxfVOx",
+                    "parent_id": "GAUIVqEJ",
+                    "hashes": {
+                        "sha512": "59f4c34803f14bde873aeca85a67b3ae5b3a871f1edfc18ed43eb79f8a0ef333547d1ce9c336660b9eff987d45a48ffb1d67599b4130517936c7678f2871eadd",
+                        "sha1": "1ad5bc55cf1f2dcf4a5667de3c7f54c837d77645"
+                    },
+                    "required_dependencies": [],
+                    "size": 12855867,
+                    "date_published": "2023-05-06T21:54:41.035558Z"
                 }
             ]
         },

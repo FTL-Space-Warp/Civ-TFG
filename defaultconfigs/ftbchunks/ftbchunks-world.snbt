@@ -3,8 +3,8 @@
 
 { 
     force_load_mode: "always",
-   	max_claimed_chunks: 2,
+   	max_claimed_chunks: 6,
     max_force_loaded_chunks: 2,
     require_game_stage: true,
-    disable_protection: true
+    disable_protection: false
 }
