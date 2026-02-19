@@ -24,7 +24,7 @@ const tier_costs = [
     //{"gtceu:bronze_ingot": 64}, // bronze
     {"gtceu:wrought_iron_ingot": 200, 
         "gtceu:bismuth_bronze_ingot": 64, "gtceu:black_bronze_ingot": 64, "gtceu:bronze_ingot": 64,
-        "tfc:burlap_cloth": 150, "tfc:linen_cloth": 150}, // iron
+        "tfc:burlap_cloth": 150, "tfg:linen_cloth": 150}, // iron
     {"gtceu:steel_ingot": 200, "create:brass_ingot": 200, "firmalife:beeswax": 150, "tfc:wool_cloth": 150}, // steel
     {"tfc:metal/ingot/black_steel": 400, "minecraft:leather": 150, "tfc:silk_cloth": 150}, // black_steel
     {"tfc:metal/ingot/red_steel": 200, "tfc:metal/ingot/blue_steel": 200, "create:electron_tube": 500}, // red_steel
@@ -134,7 +134,7 @@ ServerEvents.commandRegistry(event => {
                     const server = ctx.source.server
                     const tier = Arguments.STRING.getResult(ctx, 'tier')
 
-                    if (!progression_tiers.includes(tier)) {
+                    if (!progression_tiers.slice(0, -1).includes(tier)) {
                         ctx.source.sendFailure(Component.red(`Invalid tier: '${tier}'`))
                         return 0
                     }
@@ -144,12 +144,20 @@ ServerEvents.commandRegistry(event => {
                     }
                     return 1
                 })
-                .then(Commands.argument('target', Arguments.PLAYER.create(event))
+                .then(Commands.argument('target', Arguments.STRING.create(event))
+                    .suggests((ctx, builder) => {
+                        const server = ctx.source.server
+                        Object.keys(server.persistentData.tierProgress).forEach(tier => {
+                            Object.keys(server.persistentData.tierProgress[tier]).forEach(player => builder.suggest(player))
+                        })
+                        return builder.buildFuture()
+                    })
+
                     .executes(ctx => {
                         const sender = ctx.source.entity
                         const server = ctx.source.server
                         const tier = Arguments.STRING.getResult(ctx, 'tier')
-                        const player_name = Arguments.PLAYER.getResult(ctx, 'target').name.string
+                        const player_name = Arguments.STRING.getResult(ctx, 'target')
                         let msg = getStats(server, player_name, tier)
 
                         if (!progression_tiers.includes(tier)) {
@@ -209,7 +217,10 @@ function getProgress(server) {
             total_required += required
             const spent = spent_items[item] ?? 0
             total_spent += spent
-            outputLines.push(`- §e${Item.of(item).displayName.string.slice(4, -1)}: §f${spent}/${required}`)
+            const item_line = Text.ofString('- ').color('white')
+                .append(Text.of(Item.of(item).hoverName).color('yellow'))
+                .append(Text.ofString(`: §f${spent}/${required}`).color('white'))
+            outputLines.push(item_line)
         })
         
         let progress_bar = Math.round(50 * total_spent / total_required)
@@ -258,7 +269,11 @@ function addProgress(server, player) {
             const consumed_items = Math.min(held_items, required - spent)
             if (consumed_items) {
                 server.runCommandSilent(`clear ${player.name.string} ${item} ${consumed_items}`)
-                outputLines.push(`- §e${Item.of(item).displayName.string.slice(4, -1)}: §f${consumed_items}`)
+                const item_line = Text.ofString('- ').color('white')
+                .append(Text.of(Item.of(item).hoverName).color('yellow'))
+                .append(Text.ofString(`: ${consumed_items}`).color('white'))
+                outputLines.push(item_line)
+
                 if (!server.persistentData.tierProgress[current_tier][player.name.string]) {
                     server.persistentData.tierProgress[current_tier][player.name.string] = {}
                 }
@@ -298,7 +313,10 @@ function getStats(server, player_name, tier) {
             return [`No stats for ${player_name} for tier: §e${tier}`]
         } else {
             keys.forEach(item => {
-                outputLines.push(`- §e${Item.of(item).displayName.string.slice(4, -1)}: §f${player_stats[item]}`)
+                const item_line = Text.ofString('- ').color('white')
+                .append(Text.of(Item.of(item).hoverName).color('yellow'))
+                .append(Text.ofString(`: ${player_stats[item]}`).color('white'))
+                outputLines.push(item_line)
             })
         }
 
