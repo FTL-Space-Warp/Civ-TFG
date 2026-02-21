@@ -7,4 +7,6 @@
     max_force_loaded_chunks: 2,
     require_game_stage: true,
     disable_protection: false
+    max_idle_days_before_unforce: 30.0d
+	party_limit_mode: "sum"
 }

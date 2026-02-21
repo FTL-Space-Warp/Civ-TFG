@@ -3,7 +3,6 @@
 		name: "Player"
 		power: 1
 		condition: "always_active"
-		ftbranks.name_format: "&a{name}"
 		ftbchunks.max_claimed: 6
 		ftbchunks.max_force_loaded: 2
 		ftbchunks.chunk_load_offline: true
@@ -39,7 +38,45 @@
 		command.tpahere: false
 		command.tpdeny: false
 		command.tpx: false
-        
-		command.trashcan: false
+        	
+	}
 
-	}}
+	admin: {
+		name: "Admin"
+		power: 1000
+		condition: "op"
+		command.ftbranks: true
+
+		command.enderchest: true
+        command.ldlib: true
+        command.compass_server: true
+        command.chunky: true
+        command.catnip: true
+        command.bookshelf: true
+        command.aptweaks: true
+        command.afc: true
+        command.advancement: true
+        command.bossbar: true
+        command.clone: true
+        command.cucumber: true
+        command.gamemode: true
+        command.give: true
+        command.guideme: true 
+        command.kubejs: true
+        command.kubejs_tfc: true
+        command.letmedespawn: true
+        command.locate: true
+        command.lode: true
+		command.octolib: true
+		command.worldborder: true
+		command.whitelist: true
+		command.uteamcore: true
+		command.tpx: true
+		command.tp_offline: true
+		command.tpa: true
+		command.tpaccept: true
+		command.tpahere: true
+		command.tpdeny: true
+		command.tpx: true
+	}
+}
