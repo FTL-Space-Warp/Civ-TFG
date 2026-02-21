@@ -812,21 +812,6 @@
 				},
 				{
 					"type": "minecraft:item",
-					"name": "tfc:powder/kaolinite",
-					"functions": [
-						{
-							"function": "minecraft:set_count",
-							"count": {
-								"min": 3,
-								"max": 8,
-								"type": "minecraft:uniform"
-							}
-						}
-					],
-					"weight": 30
-				},
-				{
-					"type": "minecraft:item",
 					"name": "minecraft:phantom_membrane",
 					"functions": [
 						{
