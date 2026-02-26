@@ -88,8 +88,29 @@ function registerGreateRecipes(event) {
 	// #region Gearboxes
 
 	global.AVAILABLE_GREATE_MATERIAL_TIERS.forEach(tier => {
-		event.shapeless(`greate:${tier}_gearbox`, [`greate:${tier}_vertical_gearbox`])
+		event.shaped(`greate:${tier}_gearbox`, [
+			' A ',
+			'ABA',
+			'CA '
+		], {
+			A: `greate:${tier}_shaft`,
+			B: 'create:andesite_casing',
+			C: '#forge:tools/wrenches'
+		}).id(`tfg:shaped/${tier}_gearbox`)
 
+		event.shaped(`greate:${tier}_vertical_gearbox`, [
+			'A A',
+			' B ',
+			'ACA'
+		], {
+			A: `greate:${tier}_shaft`,
+			B: 'create:andesite_casing',
+			C: '#forge:tools/wrenches'
+		}).id(`tfg:shaped/${tier}_vertical_gearbox`)
+
+		event.shapeless(`greate:${tier}_gearbox`, [`greate:${tier}_vertical_gearbox`])
+		event.shapeless(`greate:${tier}_vertical_gearbox`, [`greate:${tier}_gearbox`])
+		
 		event.recipes.gtceu.assembler(`greate:${tier}_gearbox`)
 			.itemInputs('create:andesite_casing', `4x greate:${tier}_shaft`)
 			.itemOutputs(`greate:${tier}_gearbox`)
