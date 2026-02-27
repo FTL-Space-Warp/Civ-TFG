@@ -135,7 +135,7 @@ function registerTFGMiscellaneousRecipes(event) {
 		D: '#forge:plates/rubber'
 	}).id('tfg:mechanical_crafter/cobalt_brass_wheel')
 
-	const mattock_types = ['red', 'blue'];
+	const mattock_types = ['black'];
 	mattock_types.forEach((type) => {
 		event.recipes.gtceu.assembler(`tfg:rnr_plow/${type}_steel`)
 			.itemInputs(
