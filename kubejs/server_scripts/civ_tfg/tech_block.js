@@ -94,7 +94,7 @@ ServerEvents.commandRegistry(event => {
             if (sender) {
                 msg.forEach(line => sender.tell(line))
             } else {
-                msg.forEach(line => console.log(line))
+                console.info(msg.join('\n'))
             }
             return 1
             })
@@ -167,7 +167,7 @@ ServerEvents.commandRegistry(event => {
                         if (sender) {
                             msg.forEach(line => sender.tell(line))
                         } else {
-                            msg.forEach(line => console.log(line))
+                            console.info(msg.join('\n'))
                         }
                         return 1
                     })

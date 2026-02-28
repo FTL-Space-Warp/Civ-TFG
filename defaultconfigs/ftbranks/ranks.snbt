@@ -46,7 +46,6 @@
 		power: 1000
 		condition: "op"
 		command.ftbranks: true
-        command.spark: true
 
 		command.enderchest: true
         command.ldlib: true
