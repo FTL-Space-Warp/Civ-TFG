@@ -119,7 +119,7 @@ function registerTFGMiscellaneousRecipes(event) {
 			.duration(20 * 10)
 			.EUt(GTValues.VA[GTValues.LV])
 	});
-	TFGHelpers.registerMaterialInfo('tfg:cobalt_brass_wheel', [GTMaterials.Rubber, 1, GTMaterials.CobaltBrass, 4]);
+	TFGHelpers.registerMaterialInfo('tfg:cobalt_brass_wheel', [GTMaterials.CobaltBrass, 4]);
 
 	event.recipes.create.mechanical_crafting('tfg:cobalt_brass_wheel', [
 		'  D  ',
@@ -132,7 +132,7 @@ function registerTFGMiscellaneousRecipes(event) {
 		A: '#forge:rods/cobalt_brass',
 		B: 'firmaciv:rope_coil',
 		C: '#forge:screws/any_bronze',
-		D: '#forge:plates/rubber'
+		D: 'minecraft:leather'
 	}).id('tfg:mechanical_crafter/cobalt_brass_wheel')
 
 	const mattock_types = ['black'];
