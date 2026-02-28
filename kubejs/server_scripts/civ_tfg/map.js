@@ -19,19 +19,6 @@ ServerEvents.recipes(event => {
 
 	event.remove({ type: "map_atlases:crafting_atlas" })
 
-	// This recipe is unused, its just to make it show up in EMI
-	event.shapeless(
-		Item.of('map_atlases:atlas', 1),
-		[
-			"tfc:glue",
-			"firmaciv:sextant",
-			"firmaciv:nav_clock",
-			"minecraft:book",
-			"create:precision_mechanism",
-			"minecraft:filled_map"
-		]
-	)
-
 	// Adding the atlas recipe, it doesn't show up in the EMI
 	event.custom({
 		"type": "map_atlases:crafting_atlas",
