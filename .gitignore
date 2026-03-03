@@ -59,6 +59,13 @@ config/voicechat/username-cache.json
 
 config/stellarcore_stitcher_cache_jei.dat
 config/stellarcore_stitcher_cache_vanilla.dat
+config/gtceuterminal/**
+config/krypton_fnp.yaml
+config/particle
+config/particle_core_disabled_optimizations_v2.json
+config/tfc_gourmet-common.toml
+config/wakes-client.toml
+
 
 !config/defaultoptions/options.txt
 
