@@ -1,0 +1,5 @@
+CraftAudit-1.0.8.jar
+mysql-jdbc-8.0.33+20230506-all.jar
+simplewhitelist-0.3-all.jar
+spark-1.10.53-forge.jar
+sqlite-jdbc-3.41.2.1+20230506-all.jar
