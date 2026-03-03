@@ -1,0 +1,6 @@
+MODIFIED FILES
+kubejs/server_scripts/tfc/data.js
+
+ADDED FILES
+kubejs/data/firmalife/tfc/lamp_fuels/*
+kubejs/data/tfc/tfc/lamp_fuels/*

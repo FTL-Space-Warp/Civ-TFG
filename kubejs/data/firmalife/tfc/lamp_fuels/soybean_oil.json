@@ -1,0 +1,8 @@
+{
+  "fluid": "firmalife:soybean_oil",
+  "burn_rate": 154000,
+  "valid_lamps": {
+    "type": "tfc:tag",
+    "tag": "tfc:lamps"
+  }
+}
