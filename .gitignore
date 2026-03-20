@@ -56,6 +56,8 @@ config/everycomp-hazardous.properties
 config/fml.toml
 config/forge-client.toml
 config/voicechat/username-cache.json
+config/voicechat/voicechat-client.properties
+config/xaerominimap_entities.json
 config/emi.css
 
 config/stellarcore_stitcher_cache_jei.dat

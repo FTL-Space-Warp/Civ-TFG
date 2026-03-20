@@ -90,6 +90,7 @@ function registerTFGBakeliteRecipes(event) {
 	// machine hull changes/additions
 
 	// To Move to MV Rework after
+	/*
 	event.remove({ id: 'gtceu:shaped/mv_machine_hull'})
 	event.shaped('gtceu:mv_machine_hull', [
 		'ABA',
@@ -109,6 +110,7 @@ function registerTFGBakeliteRecipes(event) {
 		.itemOutputs('gtceu:mv_machine_hull')
 		.duration(20*2.5)
 		.EUt(GTValues.VH[GTValues.LV])
+	*/
 
 	// MV Buses
 	event.recipes.gtceu.assembler('tfg:mv_input_bus')

@@ -28,7 +28,15 @@ const tier_costs = [
     {"gtceu:steel_ingot": 200, "create:brass_ingot": 200, "firmalife:beeswax": 150, "tfc:wool_cloth": 150}, // steel
     {"tfc:metal/ingot/black_steel": 400, "minecraft:leather": 150, "tfc:silk_cloth": 150}, // black_steel
     {"tfc:metal/ingot/red_steel": 200, "tfc:metal/ingot/blue_steel": 200, "create:electron_tube": 500}, // red_steel
-    {"tfg:lv_universal_circuit": 2000, "gtceu:steel_ingot": 500}, // LV
+    {"tfg:lv_universal_circuit": 361,
+        "tfg:ulv_universal_circuit": 2707,
+        "gtceu:lv_robot_arm": 135,
+        "gtceu:lv_conveyor_module": 90,
+        "gtceu:lv_electric_pump": 90,
+        "gtceu:lv_emitter": 90,
+        "gtceu:lv_sensor": 90,
+        "minecraft:paper": 451,
+        "gtceu:sticky_resin": 902}, // LV
     {"tfg:mv_universal_circuit": 2000, "gtceu:steel_ingot": 500, "gtceu:aluminium_ingot": 500}, // MV
     {"tfg:hv_universal_circuit": 2000, "gtceu:aluminium_ingot": 500, "gtceu:stainless_steel_ingot": 500}, // HV
     {"tfg:ev_universal_circuit": 2000, "gtceu:stainless_steel_ingot": 500, "gtceu:titanium_ingot": 500}, // EV
@@ -61,6 +69,7 @@ const progression_tiers = [
 
 // Variable for the current tech tier
 const current_tier = "iron"
+// MV MACHINE HULL WAS REMOVED MANUALLY FROM tfg/machines/recipes/bakelite.js
 
 
 // Delete recipes up to the desired tier
