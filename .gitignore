@@ -11,12 +11,11 @@
 .vs/
 .vscode/
 .idea/
-package.json
 package.g.props
-package-lock.json
 node_modules/
 Modpack-Modern.sln
 Modpack-Modern.esproj
+.env
 # crowdin.yml
 edit.py
 
@@ -149,3 +148,4 @@ libEffekseerNativeForJava.so
 # .pakku/server-overrides/scripts
 # .pakku/server-overrides/mods
 # .pakku/server-overrides/user_jvm_args.txt
+

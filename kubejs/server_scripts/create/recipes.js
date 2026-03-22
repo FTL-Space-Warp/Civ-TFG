@@ -50,7 +50,7 @@ const registerCreateRecipes = (event) => {
 			{ id: 'create:crafting/logistics/stock_ticker_clear'},
 			{ id: 'create:crafting/logistics/factory_gauge_clear'},
 			{ output: '#create:table_cloths'}, // Gotta do this to not purge the table cloth reset recipes
-			{ type: 'minecraft:stonecutting' }
+			//{ type: 'minecraft:stonecutting' }
 		], mod: 'create'
 	})
 	// Make Bound Cardboard craftable with all string
@@ -68,6 +68,8 @@ const registerCreateRecipes = (event) => {
 	event.remove({ type: 'minecraft:stonecutting', input: 'create:rose_quartz' })
 	event.remove({ type: 'minecraft:stonecutting', input: 'create:polished_rose_quartz' })
 	event.remove({ type: 'minecraft:stonecutting', input: 'minecraft:iron_ingot' })
+	event.remove({ type: "minecraft:stonecutting", output: "create:copycat_step" })
+    event.remove({ type: "minecraft:stonecutting", output: "create:copycat_panel" })
 	event.remove({ type: 'create:spout_filling', id: 'create:potions' })
 	event.remove({ type: 'create:spout_filling', id: 'create:fill_minecraft_glass_bottle_with_gtceu_potion' })
 	event.remove({ type: 'create:draining', id: 'create:potions' })
@@ -1302,23 +1304,6 @@ const registerCreateRecipes = (event) => {
 		A: '#forge:rods/copper'
 	}).id('tfg:create/shaped/copper_scaffolding')
 
-	// Цинковая ступень
-	event.shaped('4x create:copycat_step', [
-		'A ',
-		' B'
-	], {
-		A: '#forge:plates/zinc',
-		B: '#forge:tools/files'
-	}).id('tfg:create/shapeless/copycat_step')
-
-	// Цинковая панель
-	event.shaped('4x create:copycat_panel', [
-		'A B',
-	], {
-		A: '#forge:plates/zinc',
-		B: '#forge:tools/files'
-	}).id('tfg:create/shapeless/copycat_panel')
-
 	// Деталь рельса
 	event.shaped('3x create:metal_girder', [
 		'AAA',
@@ -1901,14 +1886,14 @@ const registerCreateRecipes = (event) => {
 	], {
 		A: 'create:precision_mechanism',
 		C: '#forge:screws/aluminium',
-		D: 'gtceu:diode',
+		D: '#gtceu:diodes',
 		E: '#gtceu:circuits/lv',
 		F: '#forge:plates/rose_quartz',
 		G: '#forge:tools/wrenches'
 	}).id('tfg:create/shaped/factory_gauge')
 
 	event.recipes.gtceu.assembler('create:factory_gauge')
-		.itemInputs('create:precision_mechanism', '2x gtceu:diode', '#forge:small_gears/red_alloy', '#gtceu:circuits/lv', '3x #forge:plates/rose_quartz')
+		.itemInputs('create:precision_mechanism', '2x #forge:screws/aluminium', '#gtceu:diodes', '3x #forge:plates/rose_quartz', '#gtceu:circuits/lv')
 		.itemOutputs('create:factory_gauge')
 		.duration(150)
 		.EUt(16)
@@ -2404,6 +2389,25 @@ const registerCreateRecipes = (event) => {
 	//Bars
 
 	event.stonecutting('4x create:andesite_bars', '#forge:ingots/tin_alloy')
+
+	//Copycats
+	
+	event.stonecutting("16x create:copycat_step", "#forge:ingots/zinc")
+    event.stonecutting("16x create:copycat_panel", "#forge:ingots/zinc")
+
+	event.recipes.gtceu.extractor('tfg:create/copycat_step_recyle')
+    	.itemInputs('create:copycat_step')
+    	.outputFluids(Fluid.of('gtceu:zinc', 9))
+    	.duration(20)
+    	.EUt(GTValues.VA[GTValues.LV])
+    	.category(GTRecipeCategories.EXTRACTOR_RECYCLING)
+
+	event.recipes.gtceu.extractor('tfg:create/copycat_panel_recyle')
+    	.itemInputs('create:copycat_panel')
+    	.outputFluids(Fluid.of('gtceu:zinc', 9))
+    	.duration(20)
+    	.EUt(GTValues.VA[GTValues.LV])
+    	.category(GTRecipeCategories.EXTRACTOR_RECYCLING)
 
 	const create_metals = [
 		{ metal: 'andesite', material: 'tin_alloy', tier: 3 },

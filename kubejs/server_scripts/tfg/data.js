@@ -53,6 +53,7 @@ function registerTFGHeatData(event) {
 	event.itemHeat('tfg:food/cooked_burger_patty', 1.0, null, null);
 
 	event.itemHeat('tfg:unfired_rod_mold', 1.0, null, null);
+	event.itemHeat('tfg:unfired_spindle_head_mold', 1.0, null, null);
 	event.itemHeat('tfg:unfired_small_gear_mold', 1.0, null, null);
 	event.itemHeat('tfg:unfired_nugget_mold', 1.0, null, null);
 
@@ -101,6 +102,7 @@ function registerTFGItemSize(event) {
 	event.itemSize("tfg:trowel", "large", "medium", "trowel");
 
 	event.itemSize("tfg:railgun_ammo_shell", "large", "light", "railgun_ammo_shell");
+	event.itemSize("tfg:quartz_crucible", "large", "very_heavy", "quartz_crucible");
 
 	event.itemSize("tfg:harvest_basket", "large", "medium", "harvest_basket");
 	event.itemSize("tfg:aluminium_harvest_basket", "large", "medium", "aluminium_harvest_basket");
@@ -328,9 +330,11 @@ function registerTFGItemSize(event) {
 	event.itemSize(
 		orArray([
 			"tfg:unfired_rod_mold",
+			"tfg:unfired_spindle_head_mold",
 			"tfg:unfired_small_gear_mold",
 			"tfg:unfired_nugget_mold",
 			"tfg:rod_mold",
+			"tfg:spindle_head_mold",
 			"tfg:small_gear_mold",
 			"tfg:nugget_mold"
 		]),
