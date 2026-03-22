@@ -37,7 +37,15 @@ const tier_costs = [
         "gtceu:lv_sensor": 90,
         "minecraft:paper": 451,
         "gtceu:sticky_resin": 902}, // LV
-    {"tfg:mv_universal_circuit": 2000, "gtceu:steel_ingot": 500, "gtceu:aluminium_ingot": 500}, // MV
+    {"tfg:mv_universal_circuit": 512,
+        "tfg:lv_universal_circuit": 1280,
+        "gtceu:mv_robot_arm": 96,
+        "gtceu:mv_conveyor_module": 96,
+        "gtceu:mv_fluid_regulator": 96,
+        "gtceu:mv_emitter": 96,
+        "gtceu:mv_sensor": 96,
+        "gtceu:lv_field_generator": 16,
+        "minecraft:glowstone": 1280}, // MV
     {"tfg:hv_universal_circuit": 2000, "gtceu:aluminium_ingot": 500, "gtceu:stainless_steel_ingot": 500}, // HV
     {"tfg:ev_universal_circuit": 2000, "gtceu:stainless_steel_ingot": 500, "gtceu:titanium_ingot": 500}, // EV
     {"tfg:iv_universal_circuit": 2000, "gtceu:titanium_ingot": 500, "gtceu:tungsten_steel_ingot": 500}, // IV
@@ -68,7 +76,7 @@ const progression_tiers = [
 ]
 
 // Variable for the current tech tier
-const current_tier = "iron"
+const current_tier = "MV"
 // MV MACHINE HULL WAS REMOVED MANUALLY FROM tfg/machines/recipes/bakelite.js
 
 
