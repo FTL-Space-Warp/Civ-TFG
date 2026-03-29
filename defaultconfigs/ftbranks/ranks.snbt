@@ -3,7 +3,7 @@
 		name: "Player"
 		power: 1
 		condition: "always_active"
-		ftbchunks.max_claimed: 6
+		ftbchunks.max_claimed: 10
 		ftbchunks.max_force_loaded: 2
 		ftbchunks.chunk_load_offline: true
         
@@ -38,6 +38,8 @@
 		command.tpahere: false
 		command.tpdeny: false
 		command.tpx: false
+        command.pvpFlag: false
+        command.me: false
         	
 	}
 
@@ -78,5 +80,8 @@
 		command.tpahere: true
 		command.tpdeny: true
 		command.tpx: true
+        command.pvpFlag: true
+        command.me: true
+
 	}
 }

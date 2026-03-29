@@ -5,7 +5,7 @@
 	proximityDistance = 100
 	#Cooldown (in seconds) between shouts
 	#Range: 0 ~ 3600
-	shoutCooldown = 0
+	shoutCooldown = 90
 	#Color for proximity chat messages
 	#Allowed Values: BLACK, DARK_BLUE, DARK_GREEN, DARK_AQUA, DARK_RED, DARK_PURPLE, GOLD, GRAY, DARK_GRAY, BLUE, GREEN, AQUA, RED, LIGHT_PURPLE, YELLOW, WHITE, OBFUSCATED, BOLD, STRIKETHROUGH, UNDERLINE, ITALIC, RESET
 	proximityColor = "WHITE"
@@ -14,7 +14,7 @@
 	partyColor = "GREEN"
 	#Color for shout messages
 	#Allowed Values: BLACK, DARK_BLUE, DARK_GREEN, DARK_AQUA, DARK_RED, DARK_PURPLE, GOLD, GRAY, DARK_GRAY, BLUE, GREEN, AQUA, RED, LIGHT_PURPLE, YELLOW, WHITE, OBFUSCATED, BOLD, STRIKETHROUGH, UNDERLINE, ITALIC, RESET
-	shoutColor = "RED"
+	shoutColor = "BOLD"
 
 ["Party Settings"]
 	#Maximum number of players allowed in a party

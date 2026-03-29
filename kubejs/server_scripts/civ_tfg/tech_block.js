@@ -37,15 +37,14 @@ const tier_costs = [
         "gtceu:lv_sensor": 90,
         "minecraft:paper": 451,
         "gtceu:sticky_resin": 902}, // LV
-    {"tfg:mv_universal_circuit": 512,
-        "tfg:lv_universal_circuit": 1280,
-        "gtceu:mv_robot_arm": 96,
-        "gtceu:mv_conveyor_module": 96,
-        "gtceu:mv_fluid_regulator": 96,
-        "gtceu:mv_emitter": 96,
-        "gtceu:mv_sensor": 96,
-        "gtceu:lv_field_generator": 16,
-        "minecraft:glowstone": 1280}, // MV
+    {"tfg:mv_universal_circuit": 462,
+        "tfg:lv_universal_circuit": 1155,
+        "gtceu:mv_robot_arm": 87,
+        "gtceu:mv_conveyor_module": 87,
+        "gtceu:lv_fluid_regulator": 87,
+        "gtceu:mv_emitter": 87,
+        "gtceu:mv_sensor": 87,
+        "minecraft:glowstone": 1155}, // MV
     {"tfg:hv_universal_circuit": 2000, "gtceu:aluminium_ingot": 500, "gtceu:stainless_steel_ingot": 500}, // HV
     {"tfg:ev_universal_circuit": 2000, "gtceu:stainless_steel_ingot": 500, "gtceu:titanium_ingot": 500}, // EV
     {"tfg:iv_universal_circuit": 2000, "gtceu:titanium_ingot": 500, "gtceu:tungsten_steel_ingot": 500}, // IV

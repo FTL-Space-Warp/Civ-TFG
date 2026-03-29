@@ -4016,6 +4016,79 @@
             ]
         },
         {
+            "pakku_id": "OXsJZ5kkUUBAAJ3p",
+            "pakku_links": [
+                "dwyiB6r3L3TVAyVZ",
+                "Nw8xTCQngHA15ilh"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-railways-navigator",
+                "modrinth": "create-railways-navigator"
+            },
+            "name": {
+                "curseforge": "Create Railways Navigator",
+                "modrinth": "Create Railways Navigator"
+            },
+            "id": {
+                "curseforge": "935929",
+                "modrinth": "Dq3STxps"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "createrailwaysnavigator-forge-1.20.1-alpha-0.9.0-C6+2.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://edge.forgecdn.net/files/7654/971/createrailwaysnavigator-forge-1.20.1-alpha-0.9.0-C6+2.jar",
+                    "id": "7654971",
+                    "parent_id": "935929",
+                    "hashes": {
+                        "sha1": "6d9ce57cc078eaca80c3d0839a03030669782f24",
+                        "md5": "8f4696a52fd73bb6b76b4a3da428eee2"
+                    },
+                    "required_dependencies": [
+                        "946163",
+                        "328085"
+                    ],
+                    "size": 2027070,
+                    "date_published": "2026-02-20T19:51:58.610Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "createrailwaysnavigator-forge-1.20.1-alpha-0.9.0-C6+2.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://cdn.modrinth.com/data/Dq3STxps/versions/BX83dc4U/createrailwaysnavigator-forge-1.20.1-alpha-0.9.0-C6+2.jar",
+                    "id": "BX83dc4U",
+                    "parent_id": "Dq3STxps",
+                    "hashes": {
+                        "sha512": "89ed1b0d6309489500799f06b97b95eae2841c91eb6d7d30a8741fbcdf559125750beddd119574b78bbe574dd2789ce84349edba8e08b4f2c0d3e508a35a0bbd",
+                        "sha1": "6d9ce57cc078eaca80c3d0839a03030669782f24"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc",
+                        "sbIsGaOV"
+                    ],
+                    "size": 2027070,
+                    "date_published": "2026-02-20T19:52:02.595849Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "Fu7EpxmtyqTkOiMR",
             "type": "MOD",
             "side": "BOTH",
@@ -5057,6 +5130,69 @@
                     "required_dependencies": [],
                     "size": 1159578,
                     "date_published": "2026-03-15T17:07:24.277Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "dwyiB6r3L3TVAyVZ",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "dragonlib",
+                "modrinth": "dragonlib"
+            },
+            "name": {
+                "curseforge": "DragonLib",
+                "modrinth": "DragonLib"
+            },
+            "id": {
+                "curseforge": "946163",
+                "modrinth": "sbIsGaOV"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "dragonlib-forge-1.20.1-beta-3.0.24.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7763/911/dragonlib-forge-1.20.1-beta-3.0.24.jar",
+                    "id": "7763911",
+                    "parent_id": "946163",
+                    "hashes": {
+                        "sha1": "e0fce7d5c41221db91a63bc782d15d2525be2c4c",
+                        "md5": "467c8b1904d2118d18760af73608c49b"
+                    },
+                    "required_dependencies": [],
+                    "size": 2608767,
+                    "date_published": "2026-03-15T21:46:53.730Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "dragonlib-forge-1.20.1-beta-3.0.24.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/sbIsGaOV/versions/rI6RU4Ds/dragonlib-forge-1.20.1-beta-3.0.24.jar",
+                    "id": "rI6RU4Ds",
+                    "parent_id": "sbIsGaOV",
+                    "hashes": {
+                        "sha512": "e0b401be31cea3093c53a907540b5793d45d1368315ee2d30f593962031ba08fb42b297c5c1c565815d760901ee48f71dc003544b8706c74000ea03e16ae34d3",
+                        "sha1": "e0fce7d5c41221db91a63bc782d15d2525be2c4c"
+                    },
+                    "required_dependencies": [],
+                    "size": 2608767,
+                    "date_published": "2026-03-15T21:46:58.192994Z"
                 }
             ]
         },
@@ -9831,6 +9967,75 @@
             ]
         },
         {
+            "pakku_id": "iSFE5kOtBgMgfCz4",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "mod-whitelist",
+                "modrinth": "mod-whitelist"
+            },
+            "name": {
+                "curseforge": "Mod Whitelist",
+                "modrinth": "Mod Whitelist"
+            },
+            "id": {
+                "curseforge": "949096",
+                "modrinth": "uqa8tezN"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "mod_whitelist-1.1.0.jar",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.3",
+                        "1.20.1",
+                        "1.20",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4971/494/mod_whitelist-1.1.0.jar",
+                    "id": "4971494",
+                    "parent_id": "949096",
+                    "hashes": {
+                        "sha1": "65096f7689e893a2a26222c9c2a96791bd554bfa",
+                        "md5": "da8ba71752c3c310d63208ad4ee79522"
+                    },
+                    "required_dependencies": [],
+                    "size": 37997,
+                    "date_published": "2023-12-20T16:05:55.953Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "mod_whitelist-1.1.0.jar",
+                    "mc_versions": [
+                        "1.20",
+                        "1.20.1",
+                        "1.20.2",
+                        "1.20.3",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/uqa8tezN/versions/3Ui3awew/mod_whitelist-1.1.0.jar",
+                    "id": "3Ui3awew",
+                    "parent_id": "uqa8tezN",
+                    "hashes": {
+                        "sha512": "27919a9746dbd4dd93315454eb1ef9e306bee2bc523300925c84883d672dd0431fc3a888d944adb717dd4a7641b92b30c4fd0ef4b29ad609f1bc9cd153613891",
+                        "sha1": "65096f7689e893a2a26222c9c2a96791bd554bfa"
+                    },
+                    "required_dependencies": [],
+                    "size": 37997,
+                    "date_published": "2023-12-20T16:06:29.107730Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "vLkSeib1zFzTMcPF",
             "type": "MOD",
             "side": "BOTH",
@@ -10703,6 +10908,67 @@
                     ],
                     "size": 2851119,
                     "date_published": "2024-12-24T23:33:42.216148Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "IrmcbLILy0Wvcmkm",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "pvp-flagging",
+                "modrinth": "pvp-flagging"
+            },
+            "name": {
+                "curseforge": "PVP Flagging",
+                "modrinth": "PVP Flagging"
+            },
+            "id": {
+                "curseforge": "967706",
+                "modrinth": "kGSrY7gn"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "pvp_flagging-1.20.1-1.1.2.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/kGSrY7gn/versions/7EHhzc41/pvp_flagging-1.20.1-1.1.2.jar",
+                    "id": "7EHhzc41",
+                    "parent_id": "kGSrY7gn",
+                    "hashes": {
+                        "sha512": "262f2758c124e9079c377ff721ed5de712342ac96429b0ca90f0cfe430cf7c6248afd712d46117983b4d2f9acbbd448b2712f167576e313611cbb414e386a45a",
+                        "sha1": "d2cf699cc70dfa3f0bb0639fb016b76bbe37e550"
+                    },
+                    "required_dependencies": [],
+                    "size": 71301,
+                    "date_published": "2026-03-27T18:57:09.275681Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "pvp_flagging-1.20.1-1.1.2.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7179/289/pvp_flagging-1.20.1-1.1.2.jar",
+                    "id": "7179289",
+                    "parent_id": "967706",
+                    "hashes": {
+                        "sha1": "d2cf699cc70dfa3f0bb0639fb016b76bbe37e550",
+                        "md5": "83c70aa89771014263ba6a3259669773"
+                    },
+                    "required_dependencies": [],
+                    "size": 71301,
+                    "date_published": "2025-11-02T18:38:49.457Z"
                 }
             ]
         },
