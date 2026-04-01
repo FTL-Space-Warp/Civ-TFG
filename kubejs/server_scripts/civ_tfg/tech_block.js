@@ -41,7 +41,7 @@ const tier_costs = [
         "tfg:lv_universal_circuit": 1155,
         "gtceu:mv_robot_arm": 87,
         "gtceu:mv_conveyor_module": 87,
-        "gtceu:lv_fluid_regulator": 87,
+        "gtceu:mv_electric_pump": 87,
         "gtceu:mv_emitter": 87,
         "gtceu:mv_sensor": 87,
         "minecraft:glowstone": 1155}, // MV
